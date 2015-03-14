@@ -1,3 +1,3 @@
 # vim
-Mi vim configuration file.
-After cloning execute installVundle.sh to install all plugins
+My vim configuration file.
+After cloning execute installVundle.sh to install all the active plugins
