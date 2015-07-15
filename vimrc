@@ -15,7 +15,7 @@ set nohlsearch
 set nostartofline
 " set paste
 set autochdir
-set clipboard+=unnamed
+" set clipboard+=unnamed
 
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim

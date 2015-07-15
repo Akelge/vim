@@ -4,7 +4,14 @@
 " $Id$
 "
 
-set guifont=Monaco\ 11
+if has('mac') || has('macunix')
+    set guifont=Monaco:h11
+    set fuoptions=maxvert,maxhorz
+    set transparency=4
+else
+    set guifont=Monaco\ 11
+endif
+
 set anti
 set lines=45 " Change in vimrc.local
 set columns=90 " Change in vimrc.local
@@ -18,11 +25,6 @@ set guitablabel=%!GuiTabLabel()
 set guitabtooltip=%!GuiTabToolTip()
 set background=dark
 
-if has('mac') || has('macunix')
-    set guifont=Monaco:h11
-    set fuoptions=maxvert,maxhorz
-    set transparency=4
-endif
 
 set guioptions-=T
 set guioptions+=a
