@@ -181,12 +181,17 @@ let NERDCreateDefaultMappings=1
 " """"""""""""""
 " Pandoc
 " """"""""""""""
-
 let g:pandoc#command#custom_open = "MyPandocOpen"
 
 function! MyPandocOpen(file)
     return "open ". a:file
 endfunction
+"
+" """"""""""""""
+" Templates
+" """"""""""""""
+let g:templates_directory = $HOME."/.vim/myTemplates"
+
 
 " """""""""""
 " Keymappings
@@ -222,14 +227,14 @@ vnoremap <silent> <S-Down> j
 vnoremap <silent> <S-Up> k
 
 " Line/block move up/down
-nnoremap <CS-Down> :m .+1<CR>==
-nnoremap <CS-Up> :m .-2<CR>==
+nnoremap <S-D-Down> :m .+1<CR>==
+nnoremap <S-D-Up> :m .-2<CR>==
 
-inoremap <CS-Down> <Esc>:m .+1<CR>==gi
-inoremap <CS-Up> <Esc>:m .-2<CR>==gi
+inoremap <S-D-Down> <Esc>:m .+1<CR>==gi
+inoremap <S-D-Up> <Esc>:m .-2<CR>==gi
 
-vnoremap <CS-Down> :m '>+1<CR>gv=gv
-vnoremap <CS-Up> :m '<-2<CR>gv=gv
+vnoremap <S-D-Down> :m '>+0<CR>gv=gv
+vnoremap <S-D-Up> :m '<-2<CR>gv=gv
 
 " Terminal/Filemanager
 " nnoremap <silent> <F9> :OpenTerminal<CR>
