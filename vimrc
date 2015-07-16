@@ -134,7 +134,6 @@ set cinkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
 " These are files we are not likely to want to edit or read.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
-
 " """""""""""""""
 " TagLIST support
 " Below is a placeholder for ctags so vim does not complain if there is no
@@ -187,10 +186,6 @@ function! MyPandocOpen(file)
     return "open ". a:file
 endfunction
 "
-" """"""""""""""
-" Templates
-" """"""""""""""
-let g:templates_directory = $HOME."/.vim/myTemplates"
 
 
 " """""""""""
@@ -220,21 +215,32 @@ map <silent> <Leader>c <plug>NERDCommenterToggle
 inoremap <silent> <C-\> <C-N>
 inoremap <silent> <C-Tab> <C-N>
 
+" Line/block move up/down
+if (has('mac') || has('macunix'))
+    nnoremap <T-Down> :m .+1<CR>==
+    nnoremap <T-Up> :m .-2<CR>==
+
+    inoremap <T-Down> <Esc>:m .+1<CR>==gi
+    inoremap <T-Up> <Esc>:m .-2<CR>==gi
+
+    vnoremap <T-Down> :m '>+0<CR>gv=gv
+    vnoremap <T-Up> :m '<-2<CR>gv=gv
+else
+    nnoremap <C-Down> :m .+1<CR>==
+    nnoremap <C-Up> :m .-2<CR>==
+
+    inoremap <C-Down> <Esc>:m .+1<CR>==gi
+    inoremap <C-Up> <Esc>:m .-2<CR>==gi
+
+    vnoremap <C-Down> :m '>+0<CR>gv=gv
+    vnoremap <C-Up> :m '<-2<CR>gv=gv
+endif
+
 " Visual mode selection
 nnoremap <silent> <S-Down> V
 nnoremap <silent> <S-Up> V
 vnoremap <silent> <S-Down> j
 vnoremap <silent> <S-Up> k
-
-" Line/block move up/down
-nnoremap <S-D-Down> :m .+1<CR>==
-nnoremap <S-D-Up> :m .-2<CR>==
-
-inoremap <S-D-Down> <Esc>:m .+1<CR>==gi
-inoremap <S-D-Up> <Esc>:m .-2<CR>==gi
-
-vnoremap <S-D-Down> :m '>+0<CR>gv=gv
-vnoremap <S-D-Up> :m '<-2<CR>gv=gv
 
 " Terminal/Filemanager
 " nnoremap <silent> <F9> :OpenTerminal<CR>

@@ -42,9 +42,23 @@ colorscheme freya
 " colorscheme macvim
 " colorscheme inkpot
 
+" Line/block move up/down
+if (has('mac') || has('macunix'))
+    nnoremap <M-Up> :m .-2<CR>==
+    nnoremap <M-Down> :m .+1<CR>==
+
+    inoremap <M-Up> <Esc>:m .-2<CR>==gi
+    inoremap <M-Down> <Esc>:m .+1<CR>==gi
+
+    vnoremap <M-Up> :m '<-2<CR>gv=gv
+    vnoremap <M-Down> :m '>+1<CR>gv=gv
+endif
+
 " Emacs like indenting. Pressing Tab indents line
 set indentkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
 set cinkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
+
+
 
 " User customizations are held in file ~/.vim/gvimrc.local
 if filereadable($HOME."/.vim/gvimrc.local")
