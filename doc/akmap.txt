@@ -21,6 +21,8 @@
 ,N - Toggle line numbers             |numbers|
 ,x - Toggle paste                    |paste|
 ,f - Toggle Full screen
+
+
 ,n - Toggle NERD Tree (file browser) |NERDTree|
 ,T - Toggle tags list                |taglist.txt|
 
@@ -60,13 +62,24 @@ See |textformat|
 7. Misc~
 
 In command or insertion mode:
+
+On Linux:
 <Shift-Ctrl-Up>   - Move line up
 <Shift-Ctrl-Down> - Move line down
 
+On OSX:
+<Opt-Up>    - Move line up
+<Opt-Down>  - Move line down
+
 In Visual mode:
+
+On Linux:
 <Shift-Ctrl-Up>   - Move block up
 <Shift-Ctrl-Down> - Move block down
 
+On OSX:
+<Opt-Up>   - Move block up
+<Opt-Down> - Move block down
 
                                 *akmap-ver*
 8. Version~

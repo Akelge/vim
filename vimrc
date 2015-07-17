@@ -207,7 +207,7 @@ nnoremap <silent> da "_dd
 " nnoremap <End> $
 
 nnoremap <silent> <Leader>ts :ConqueTermSplit zsh<CR>
-nnoremap <silent> <Leader>tT :ConqueTermTab zsh<CR>
+nnoremap <silent> <Leader>tn :ConqueTermTab zsh<CR>
 
 map <silent> <Leader>c <plug>NERDCommenterToggle
 
