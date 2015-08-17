@@ -32,9 +32,10 @@ if &background == "dark"
     hi normal guibg=black
 endif
 
+colorscheme Tomorrow-Night-Eighties
 " colorscheme railscasts
 " colorscheme zenburn
-colorscheme freya
+" colorscheme freya
 " colorscheme southwest-fog
 " colorscheme moria
 " colorscheme morning

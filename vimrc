@@ -27,6 +27,7 @@ Plugin 'The-NERD-Tree'
 Plugin 'open-terminal-filemanager'
 Plugin 'Conque-Shell'
 Plugin 'taglist-plus'
+Plugin 'darfink/vim-plist'
 Plugin 'vcscommand.vim'
 Plugin 'TextFormat'
 Plugin 'jsbeautify'
@@ -36,6 +37,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'bling/vim-airline'
 Plugin 'saltstack/salt-vim'
+Plugin 'andviro/flake8-vim'
 
 call vundle#end()            " required
 
@@ -56,6 +58,7 @@ set expandtab
 set softtabstop=4
 " set autoindent
 " set smartindent
+let g:PyFlakeDisabledMessages = 'E128,E501,E116'
 
 " Highlightinh in python:
 let python_highlight_numbers = 1
