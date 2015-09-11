@@ -38,6 +38,15 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'bling/vim-airline'
 Plugin 'saltstack/salt-vim'
 Plugin 'andviro/flake8-vim'
+Plugin 'mkitt/tabline.vim.git'
+
+" Snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+
+" Optional:
+Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
 
@@ -125,7 +134,7 @@ function! CleverTab()
     endfunction
 " map the function to Tab
 " inoremap <C-\> <C-R>=CleverTab()<CR>
-inoremap <Tab> <C-R>=CleverTab()<CR>
+" inoremap <Tab> <C-R>=CleverTab()<CR>
 set completeopt=longest
 
 " Emacs like indenting. Pressing Tab indents line
