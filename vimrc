@@ -133,8 +133,12 @@ function! CleverTab()
         return "\<C-N>"
     endfunction
 " map the function to Tab
-" inoremap <C-\> <C-R>=CleverTab()<CR>
-" inoremap <Tab> <C-R>=CleverTab()<CR>
+inoremap <C-\> <C-R>=CleverTab()<CR>
+inoremap <Tab> <C-R>=CleverTab()<CR>
+" map Shift-Tab to Snipmate
+imap <S-Tab> <Plug>snipMateNextOrTrigger
+smap <S-Tab> <Plug>snipMateNextOrTrigger
+
 set completeopt=longest
 
 " Emacs like indenting. Pressing Tab indents line
