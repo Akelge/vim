@@ -40,7 +40,8 @@ endif
 Plugin 'bling/vim-airline'
 Plugin 'saltstack/salt-vim'
 Plugin 'andviro/flake8-vim'
-Plugin 'mkitt/tabline.vim.git'
+Plugin 'mkitt/tabline.vim'
+Plugin 'robbles/logstash.vim'
 
 " Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
