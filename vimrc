@@ -33,8 +33,10 @@ Plugin 'TextFormat'
 Plugin 'jsbeautify'
 Plugin 'aperezdc/vim-template.git'
 Plugin 'scratch.vim'
+if v:version > 740
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+endif
 Plugin 'bling/vim-airline'
 Plugin 'saltstack/salt-vim'
 Plugin 'andviro/flake8-vim'
