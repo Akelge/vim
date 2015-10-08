@@ -41,7 +41,9 @@ Plugin 'bling/vim-airline'
 Plugin 'saltstack/salt-vim'
 Plugin 'andviro/flake8-vim'
 Plugin 'mkitt/tabline.vim'
+" Conf files
 Plugin 'robbles/logstash.vim'
+Plugin 'sclo/haproxy.vim'
 
 " Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
