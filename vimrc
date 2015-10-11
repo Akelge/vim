@@ -33,7 +33,7 @@ Plugin 'TextFormat'
 Plugin 'jsbeautify'
 Plugin 'aperezdc/vim-template.git'
 Plugin 'scratch.vim'
-if v:version > 740
+if v:version >= 704
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 endif
