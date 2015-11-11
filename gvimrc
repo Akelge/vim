@@ -45,6 +45,7 @@ colorscheme Tomorrow-Night-Eighties
 
 " Line/block move up/down
 if (has('mac') || has('macunix'))
+    set clipboard=unnamed
     nnoremap <M-Up> :m .-2<CR>==
     nnoremap <M-Down> :m .+1<CR>==
 

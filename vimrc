@@ -333,6 +333,7 @@ endif
 " Map Ctrl-T to new tab and Ctrl-W to close tab
 " Map Ctrl-S to save
 if !(has('mac') || has('macunix'))
+    set clipboard=unnamed
     nnoremap <silent> <C-T> :tabnew<CR>
     nnoremap <silent> <C-W> :tabclose<CR>
     nnoremap <silent> <C-S> :w<CR>
