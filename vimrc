@@ -44,6 +44,7 @@ Plugin 'mkitt/tabline.vim'
 " Conf files
 Plugin 'robbles/logstash.vim'
 Plugin 'sclo/haproxy.vim'
+Plugin 'evanmiller/nginx-vim-syntax'
 
 " Snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -266,6 +267,10 @@ map <silent> <Leader>c <plug>NERDCommenterToggle
 inoremap <silent> <C-\> <C-N>
 inoremap <silent> <C-Tab> <C-N>
 
+" diffput/diffget
+nnoremap <silent> <Leader>dp :diffput<CR>
+nnoremap <silent> <Leader>dg :diffget<CR>
+
 " Line/block move up/down
 if (has('mac') || has('macunix'))
     nnoremap <T-Down> :m .+1<CR>==
@@ -355,6 +360,9 @@ if has("autocmd")
         \ if line("'\"") > 0 && line ("'\"") <= line("$") |
         \   exe "normal g'\"" |
         \ endif
+  " If doing a diff. Upon writing changes to file, automatically update the differences
+  autocmd BufWritePost * if &diff == 1 | diffupdate | endif
+
   " Mako
   autocmd! BufRead,BufNewFile *.mako       setfiletype mako
   autocmd BufWinEnter *.mako setfiletype mako
