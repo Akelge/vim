@@ -292,11 +292,11 @@ else
     vnoremap <C-Up> :m '<-2<CR>gv=gv
 endif
 
-" Visual mode selection
-nnoremap <silent> <S-Down> V
-nnoremap <silent> <S-Up> V
-vnoremap <silent> <S-Down> j
-vnoremap <silent> <S-Up> k
+" " Visual mode selection
+" nnoremap <silent> <S-Down> V
+" nnoremap <silent> <S-Up> V
+" vnoremap <silent> <S-Down> j
+" vnoremap <silent> <S-Up> k
 
 " Terminal/Filemanager
 " nnoremap <silent> <F9> :OpenTerminal<CR>
