@@ -17,6 +17,9 @@ set nostartofline
 set autochdir
 " set clipboard+=unnamed
 
+" We use , as leader
+let g:mapleader = ","
+
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -73,13 +76,19 @@ set expandtab
 set softtabstop=4
 " set autoindent
 " set smartindent
-let g:PyFlakeDisabledMessages = 'E128,E501,E116'
 
 " Highlightinh in python:
 let python_highlight_numbers = 1
 let python_highlight_builtins = 1
 let python_highlight_exceptions = 1
 let python_highlight_space_errors = 1
+
+" Flake8
+" let g:PyFlakeOnWrite = 0
+let g:PyFlakeCheckers = 'pep8,frosted'
+let g:PyFlakeDisabledMessages = 'E128,E501,E116'
+" nnoremap <silent> <Leader>8 :PyFlake<CR>
+
 " END PYTHON GOODIES
 
 set nofoldenable
@@ -243,7 +252,6 @@ let g:airline_symbols.whitespace = 'Ξ'
 " """""""""""
 " Keymappings
 " """""""""""
-let g:mapleader = ","
 nnoremap <silent> <Leader>l :set list!<CR>
 nnoremap <silent> <Leader>f :set fullscreen!<CR>
 nnoremap <silent> <Leader>x :set paste!<CR>
