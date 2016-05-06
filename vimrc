@@ -15,7 +15,7 @@ set nohlsearch
 set nostartofline
 " set paste
 set autochdir
-" set clipboard+=unnamed
+set clipboard+=unnamed
 
 " We use , as leader
 let g:mapleader = ","
@@ -87,7 +87,7 @@ let python_highlight_space_errors = 1
 " let g:PyFlakeOnWrite = 0
 let g:PyFlakeCheckers = 'pep8,frosted'
 let g:PyFlakeDisabledMessages = 'E128,E501,E116'
-" nnoremap <silent> <Leader>8 :PyFlake<CR>
+nnoremap <silent> <Leader>8 :PyFlakeToggle<CR>
 
 " END PYTHON GOODIES
 
