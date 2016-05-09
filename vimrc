@@ -15,7 +15,7 @@ set nohlsearch
 set nostartofline
 " set paste
 set autochdir
-set clipboard+=unnamed
+" set clipboard+=unnamed
 
 " We use , as leader
 let g:mapleader = ","
@@ -24,11 +24,13 @@ let g:mapleader = ","
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'The-NERD-Commenter'
 Plugin 'The-NERD-Tree'
 Plugin 'open-terminal-filemanager'
-Plugin 'Conque-Shell'
+" Plugin 'Conque-Shell'
+Plugin 'oplatek/Conque-Shell.git'
 Plugin 'taglist-plus'
 Plugin 'darfink/vim-plist'
 Plugin 'vcscommand.vim'
@@ -205,10 +207,6 @@ let NERDSpaceDelims=1
 let NERDCreateDefaultMappings=1
 
 " """"""""""""""
-" GetLastestScript
-" """"""""""""""
-
-" """"""""""""""
 " Pandoc
 " """"""""""""""
 let g:pandoc#command#custom_open = "MyPandocOpen"
@@ -300,11 +298,11 @@ else
     vnoremap <C-Up> :m '<-2<CR>gv=gv
 endif
 
-" " Visual mode selection
-" nnoremap <silent> <S-Down> V
-" nnoremap <silent> <S-Up> V
-" vnoremap <silent> <S-Down> j
-" vnoremap <silent> <S-Up> k
+" Visual mode selection
+nnoremap <silent> <S-Down> V
+nnoremap <silent> <S-Up> V
+vnoremap <silent> <S-Down> j
+vnoremap <silent> <S-Up> k
 
 " Terminal/Filemanager
 " nnoremap <silent> <F9> :OpenTerminal<CR>
