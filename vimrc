@@ -401,8 +401,10 @@ if has("autocmd")
   "
   " Reload .vimrc, after modifications
   autocmd BufWritePost ~/.vimrc   so ~/.vimrc
+  autocmd BufWritePost ~/.vim/vimrc   so ~/.vim/vimrc
   if has("gui_running")
     autocmd BufWritePost ~/.gvimrc   so ~/.gvimrc
+    autocmd BufWritePost ~/.vim/gvimrc   so ~/.vim/gvimrc
   endif
 
 
