@@ -393,12 +393,18 @@ if has("autocmd")
   " Javascript
   autocmd FileType javascript set sw=4 ts=4 sts=4 smarttab expandtab
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+  
+  " Bind zone file
+  autocmd BufNewFile,BufRead *.domain setf bindzone
+  autocmd BufNewFile,BufRead *.zone setf bindzone
+
   "
   " Reload .vimrc, after modifications
   autocmd BufWritePost ~/.vimrc   so ~/.vimrc
   if has("gui_running")
     autocmd BufWritePost ~/.gvimrc   so ~/.gvimrc
   endif
+
 
 
   " Transparent editing of gpg encrypted files.
