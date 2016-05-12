@@ -56,7 +56,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 
-" Optional:
+" Optional: snippets for snipmate
 Plugin 'honza/vim-snippets'
 
 call vundle#end()            " required
