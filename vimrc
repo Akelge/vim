@@ -51,13 +51,14 @@ Plugin 'robbles/logstash.vim'
 Plugin 'sclo/haproxy.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 
-" Snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+" " Snipmate
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
+" " Plugin 'garbas/vim-snipmate'
+" Plugin 'ervandew/snipmate.vim'
+" Plugin 'honza/vim-snippets'
 
-" Optional: snippets for snipmate
-Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
 
 call vundle#end()            " required
 
@@ -139,22 +140,22 @@ colorscheme wombat256
 " COMPLETION & INDENTATION
 " """""""""""""""""""""""""
 
-" Function that returns tab if called on an "empty" line
-" C-N elsewhere
-function! CleverTab()
-    if &ft=="text"
-        return "\<Tab>"
-    elseif strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-        return "\<Tab>"
-    else
-        return "\<C-N>"
-    endfunction
-" map the function to Tab
-inoremap <C-\> <C-R>=CleverTab()<CR>
-inoremap <Tab> <C-R>=CleverTab()<CR>
+" " Function that returns tab if called on an "empty" line
+" " C-N elsewhere
+" function! CleverTab()
+    " if &ft=="text"
+        " return "\<Tab>"
+    " elseif strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+        " return "\<Tab>"
+    " else
+        " return "\<C-N>"
+    " endfunction
+" " map the function to Tab
+" inoremap <C-\> <C-R>=CleverTab()<CR>
+" inoremap <Tab> <C-R>=CleverTab()<CR>
 " map Shift-Tab to Snipmate
-imap <S-Tab> <Plug>snipMateNextOrTrigger
-smap <S-Tab> <Plug>snipMateNextOrTrigger
+" imap <S-Tab> <Plug>snipMateNextOrTrigger
+" smap <S-Tab> <Plug>snipMateNextOrTrigger
 
 set completeopt=longest
 
