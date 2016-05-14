@@ -270,9 +270,8 @@ nnoremap <silent> <Leader>tn :ConqueTermTab zsh<CR>
 
 map <silent> <Leader>c <plug>NERDCommenterToggle
 
-" nnoremap <silent> Y         y$
-inoremap <silent> <C-\> <C-N>
-inoremap <silent> <C-Tab> <C-N>
+" inoremap <silent> <C-\> <C-N>
+" inoremap <silent> <C-Tab> <C-N>
 
 " diffput/diffget
 nnoremap <silent> <Leader>dp :diffput<CR>
