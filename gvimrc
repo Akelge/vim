@@ -24,6 +24,7 @@ set showtabline=2
 set guitablabel=%!GuiTabLabel()
 set guitabtooltip=%!GuiTabToolTip()
 set background=dark
+set cpoptions=+$
 
 
 set guioptions-=T
@@ -45,7 +46,7 @@ colorscheme Tomorrow-Night-Eighties
 
 " Line/block move up/down
 if (has('mac') || has('macunix'))
-    set clipboard=unnamed
+    " set clipboard=unnamedplus
     nnoremap <M-Up> :m .-2<CR>==
     nnoremap <M-Down> :m .+1<CR>==
 
