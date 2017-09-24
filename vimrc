@@ -20,6 +20,8 @@ set autochdir
 " We use , as leader
 let g:mapleader = ","
 
+set rtp+=~/.vim
+
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -44,19 +46,20 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 endif
 Plugin 'bling/vim-airline'
 Plugin 'saltstack/salt-vim'
-Plugin 'andviro/flake8-vim'
+" Plugin 'andviro/flake8-vim'
 Plugin 'mkitt/tabline.vim'
 " Conf files
 Plugin 'robbles/logstash.vim'
 Plugin 'sclo/haproxy.vim'
-Plugin 'evanmiller/nginx-vim-syntax'
+" Plugin 'evanmiller/nginx-vim-syntax'
+Plugin 'chr4/nginx.vim.git'
 
 " " Snipmate
-" Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'tomtom/tlib_vim'
-" " Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 " Plugin 'ervandew/snipmate.vim'
-" Plugin 'honza/vim-snippets'
+Plugin 'honza/vim-snippets'
 
 Plugin 'ervandew/supertab'
 
@@ -87,7 +90,7 @@ let python_highlight_exceptions = 1
 let python_highlight_space_errors = 1
 
 " Flake8
-" let g:PyFlakeOnWrite = 0
+" " let g:PyFlakeOnWrite = 0
 let g:PyFlakeCheckers = 'pep8,frosted'
 let g:PyFlakeDisabledMessages = 'E128,E501,E116'
 nnoremap <silent> <Leader>8 :PyFlakeToggle<CR>
@@ -157,7 +160,7 @@ colorscheme wombat256
 " imap <S-Tab> <Plug>snipMateNextOrTrigger
 " smap <S-Tab> <Plug>snipMateNextOrTrigger
 
-set completeopt=longest
+" set completeopt=longest
 
 " Emacs like indenting. Pressing Tab indents line
 " Not in python, there it is managed by GetPythonIndent
@@ -356,7 +359,7 @@ nnoremap <silent> <Leader>hh :help akmap<CR>
 " Vim5 comes with syntaxhighlighting. If you want to enable syntaxhightlighting
 " by default uncomment the next three lines.
 if has("syntax")
-    syntax on		" Default to no syntax highlightningendif " has("syntax")
+    syntax on		" Default to no syntax highlightning
 endif
 
 if has("autocmd")
