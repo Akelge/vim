@@ -13,44 +13,7 @@ set viminfo='20,\"50,f10,!,%
 set history=50
 set nohlsearch
 set nostartofline
-" set paste
 set autochdir
-" set clipboard+=unnamed
-
-" We use , as leader
-let g:mapleader = ","
-
-filetype plugin indent on    " required
-
-" Let's go to 256 colors
-set t_Co=256
-
-set ruler
-set cmdheight=1
-set laststatus=2
-
-" PYTHON GOODIES
-set tabstop=4
-set shiftwidth=4
-set smarttab
-set expandtab
-set softtabstop=4
-" set autoindent
-" set smartindent
-
-" Highlightinh in python:
-let python_highlight_numbers = 1
-let python_highlight_builtins = 1
-let python_highlight_exceptions = 1
-let python_highlight_space_errors = 1
-
-" Flake8
-" " let g:PyFlakeOnWrite = 0
-let g:PyFlakeCheckers = 'pep8,frosted'
-let g:PyFlakeDisabledMessages = 'E128,E501,E116'
-nnoremap <silent> <Leader>8 :PyFlakeToggle<CR>
-
-" END PYTHON GOODIES
 
 set nofoldenable
 set background=dark
@@ -78,6 +41,41 @@ set fileformats=unix,mac,dos
 set fileformat=unix
 set mouse=a
 
+" set paste
+" set clipboard+=unnamed
+
+" We use , as leader
+let g:mapleader = ","
+
+filetype plugin indent on    " required
+
+" Let's go to 256 colors
+set t_Co=256
+set ruler
+set cmdheight=1
+set laststatus=2
+
+" PYTHON GOODIES
+set tabstop=2
+set shiftwidth=2
+set smarttab
+set expandtab
+set softtabstop=2
+
+" Highlightinh in python:
+let python_highlight_numbers = 1
+let python_highlight_builtins = 1
+let python_highlight_exceptions = 1
+let python_highlight_space_errors = 1
+
+" Flake8
+" " let g:PyFlakeOnWrite = 0
+let g:PyFlakeCheckers = 'pep8,frosted'
+let g:PyFlakeDisabledMessages = 'E128,E501,E116'
+nnoremap <silent> <Leader>8 :PyFlakeToggle<CR>
+
+" END PYTHON GOODIES
+
 if has('mac') || has('macunix')
     set printfont=Monaco:h12
 else
@@ -93,27 +91,6 @@ endif
 " let g:shortname = 'login'
 " let g:fullname  = 'Full Name'
 " let g:email     = 'email address'
-
-" """""""""""""""""""""""""
-" COMPLETION & INDENTATION
-" """""""""""""""""""""""""
-
-" " Function that returns tab if called on an "empty" line
-" " C-N elsewhere
-" function! CleverTab()
-    " if &ft=="text"
-        " return "\<Tab>"
-    " elseif strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
-        " return "\<Tab>"
-    " else
-        " return "\<C-N>"
-    " endfunction
-" " map the function to Tab
-" inoremap <C-\> <C-R>=CleverTab()<CR>
-" inoremap <Tab> <C-R>=CleverTab()<CR>
-" map Shift-Tab to Snipmate
-" imap <S-Tab> <Plug>snipMateNextOrTrigger
-" smap <S-Tab> <Plug>snipMateNextOrTrigger
 
 " set completeopt=longest
 
@@ -140,7 +117,6 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 let Tlist_Ctags_Cmd="/bin/true"
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_File_Fold_Auto_Close = 1
-"let Tlist_Use_SingleClick = 0 "Do not use yet
 let Tlist_Use_Right_Window = 1
 let Tlist_Display_Prototype = 0
 let Tlist_Compact_Format = 1
@@ -165,21 +141,11 @@ let NERDChristmasTree = 1
 let NERDSpaceDelims=1
 let NERDCreateDefaultMappings=1
 
-" """"""""""""""
-" Pandoc
-" """"""""""""""
-let g:pandoc#command#custom_open = "MyPandocOpen"
-
-function! MyPandocOpen(file)
-    return "open ". a:file
-endfunction
-
-
 " """""""""""""""""
 " Templates
 " """""""""""""""""
 
-let g:templates_directory=[$HOME.'/.vim/myTemplates']
+let g:templates_directory=[$HOME.'/.vim/templates']
 
 " """""""""""""""""
 " Airline customizations
