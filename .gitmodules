@@ -64,3 +64,6 @@
 [submodule "pack/local/opt/vim-snippets"]
 	path = pack/local/opt/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "pack/local/start/textformat.vim"]
+	path = pack/local/start/textformat.vim
+	url = https://github.com/jozip/textformat.vim.git
