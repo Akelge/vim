@@ -20,51 +20,6 @@ set autochdir
 " We use , as leader
 let g:mapleader = ","
 
-set rtp+=~/.vim
-
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'The-NERD-Commenter'
-Plugin 'The-NERD-Tree'
-Plugin 'open-terminal-filemanager'
-" Plugin 'Conque-Shell'
-Plugin 'oplatek/Conque-Shell.git'
-Plugin 'taglist-plus'
-" Plugin 'darfink/vim-plist'
-Plugin 'vcscommand.vim'
-Plugin 'TextFormat'
-Plugin 'jsbeautify'
-Plugin 'aperezdc/vim-template.git'
-Plugin 'scratch.vim'
-if v:version >= 704
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-endif
-Plugin 'bling/vim-airline'
-Plugin 'saltstack/salt-vim'
-" Plugin 'andviro/flake8-vim'
-Plugin 'mkitt/tabline.vim'
-" Conf files
-Plugin 'robbles/logstash.vim'
-Plugin 'sclo/haproxy.vim'
-" Plugin 'evanmiller/nginx-vim-syntax'
-Plugin 'chr4/nginx.vim.git'
-
-" " Snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-" Plugin 'ervandew/snipmate.vim'
-Plugin 'honza/vim-snippets'
-
-Plugin 'ervandew/supertab'
-
-call vundle#end()            " required
-
 filetype plugin indent on    " required
 
 " Let's go to 256 colors
@@ -129,7 +84,7 @@ else
     set printfont=Monaco\ 12
 endif
 
-colorscheme wombat256
+" colorscheme wombat256
 
 " """""""""
 " User Info
@@ -371,6 +326,9 @@ if has("autocmd")
         \ endif
   " If doing a diff. Upon writing changes to file, automatically update the differences
   autocmd BufWritePost * if &diff == 1 | diffupdate | endif
+
+  autocmd BufNewFile,BufRead *.txt setf text
+  autocmd FileType text set textwidth=78 printfont=:h10
 
   " Reload .vimrc, after modifications
   autocmd BufWritePost ~/.vimrc   so ~/.vimrc

@@ -1,0 +1,66 @@
+[submodule "pack/local/start/Conque-Shell"]
+	path = pack/local/start/Conque-Shell
+	url = https://github.com/oplatek/Conque-Shell.git
+[submodule "pack/local/start/jsbeautify"]
+	path = pack/local/start/jsbeautify
+	url = https://github.com/vim-scripts/jsbeautify.git
+[submodule "pack/local/start/nginx.vim"]
+	path = pack/local/start/nginx.vim
+	url = https://github.com/chr4/nginx.vim.git
+[submodule "pack/local/start/supertab"]
+	path = pack/local/start/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "pack/local/start/tabline.vim"]
+	path = pack/local/start/tabline.vim
+	url = https://github.com/mkitt/tabline.vim.git
+[submodule "pack/local/start/taglist-plus"]
+	path = pack/local/start/taglist-plus
+	url = https://github.com/vim-scripts/taglist-plus.git
+[submodule "pack/local/start/TextFormat"]
+	path = pack/local/start/TextFormat
+	url = https://github.com/vim-scripts/TextFormat.git
+[submodule "pack/local/start/The-NERD-Commenter"]
+	path = pack/local/start/The-NERD-Commenter
+	url = https://github.com/vim-scripts/The-NERD-Commenter.git
+[submodule "pack/local/start/tlib_vim"]
+	path = pack/local/start/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "pack/local/start/vcscommand.vim"]
+	path = pack/local/start/vcscommand.vim
+	url = https://github.com/vim-scripts/vcscommand.vim.git
+[submodule "pack/local/start/vim-addon-mw-utils"]
+	path = pack/local/start/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "pack/local/start/vim-airline"]
+	path = pack/local/start/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "pack/local/start/vim-template"]
+	path = pack/local/start/vim-template
+	url = https://github.com/aperezdc/vim-template.git
+[submodule "pack/local/opt/haproxy.vim"]
+	path = pack/local/opt/haproxy.vim
+	url = https://github.com/sclo/haproxy.vim.git
+[submodule "pack/local/opt/logstash.vim"]
+	path = pack/local/opt/logstash.vim
+	url = https://github.com/robbles/logstash.vim.git
+[submodule "pack/local/opt/open-terminal-filemanager"]
+	path = pack/local/opt/open-terminal-filemanager
+	url = https://github.com/vim-scripts/open-terminal-filemanager.git
+[submodule "pack/local/opt/salt-vim"]
+	path = pack/local/opt/salt-vim
+	url = https://github.com/saltstack/salt-vim.git
+[submodule "pack/local/opt/The-NERD-Tree"]
+	path = pack/local/opt/The-NERD-Tree
+	url = https://github.com/vim-scripts/The-NERD-Tree.git
+[submodule "pack/local/opt/vim-pandoc"]
+	path = pack/local/opt/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc.git
+[submodule "pack/local/opt/vim-pandoc-syntax"]
+	path = pack/local/opt/vim-pandoc-syntax
+	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule "pack/local/opt/vim-snipmate"]
+	path = pack/local/opt/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "pack/local/opt/vim-snippets"]
+	path = pack/local/opt/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
