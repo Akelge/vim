@@ -67,3 +67,6 @@
 [submodule "pack/local/start/textformat.vim"]
 	path = pack/local/start/textformat.vim
 	url = https://github.com/jozip/textformat.vim.git
+[submodule "pack/local/start/vim-terraform"]
+	path = pack/local/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
