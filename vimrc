@@ -31,7 +31,7 @@ set smartcase       " But with style
 set errorbells
 " set visualbell
 set showcmd         " Show (partial) command in status line.
-set showmatch       " Show matching brackets.
+" set showmatch       " Show matching brackets.
 set incsearch       " Incremental search
 set autowrite       " Automatically save before commands like :next and :make
 " set statusline=%<%f\ %H%m%r%=%-14.(%l,%c%)\ %P\ Buf.%n
@@ -43,6 +43,8 @@ set mouse=a
 
 " set paste
 " set clipboard+=unnamed
+"
+let g:loaded_matchparen=1
 
 " We use , as leader
 let g:mapleader = ","
