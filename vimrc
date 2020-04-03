@@ -145,7 +145,8 @@ let NERDCreateDefaultMappings=1
 " Templates
 " """""""""""""""""
 
-let g:templates_directory=[$HOME.'/.vim/templates']
+" let g:templates_directory=[$HOME.'/.vim/templates']
+let g:templates_directory=[$HOME.'/.vim/templates', 'templates']
 
 " """""""""""""""""
 " Airline customizations
