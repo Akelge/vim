@@ -70,3 +70,9 @@
 [submodule "pack/local/start/vim-terraform"]
 	path = pack/local/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "pack/local/start/surround"]
+	path = pack/local/start/surround
+	url = https://tpope.io/vim/surround.git
+[submodule "pack/local/start/vim-fish"]
+	path = pack/local/start/vim-fish
+	url = https://github.com/dag/vim-fish.git
