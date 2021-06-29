@@ -49,3 +49,6 @@
 [submodule "pack/local/start/vim-fugitive"]
 	path = pack/local/start/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+[submodule "pack/local/start/tlib_vim"]
+	path = pack/local/start/tlib_vim
+	url = git@github.com:tomtom/tlib_vim.git
