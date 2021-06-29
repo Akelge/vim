@@ -29,33 +29,34 @@ set listchars=tab:->,trail:.,eol:$,extends:>,precedes:<
 set ignorecase      " Do case insensitive matching
 set smartcase       " But with style
 set errorbells
-" set visualbell
 set showcmd         " Show (partial) command in status line.
-" set showmatch       " Show matching brackets.
+set showmatch       " Show matching brackets.
 set incsearch       " Incremental search
 set autowrite       " Automatically save before commands like :next and :make
-" set statusline=%<%f\ %H%m%r%=%-14.(%l,%c%)\ %P\ Buf.%n
-" set showtabline=2
 set backupcopy=yes
 set fileformats=unix,mac,dos
 set fileformat=unix
 set mouse=a
 
-" set paste
-" set clipboard+=unnamed
-"
-let g:loaded_matchparen=1
+" let g:loaded_matchparen=1
 
 " We use , as leader
 let g:mapleader = ","
-
-filetype plugin indent on    " required
 
 " Let's go to 256 colors
 set t_Co=256
 set ruler
 set cmdheight=1
 set laststatus=2
+"
+" Emacs like indenting. Pressing Tab indents line
+" Not in python, there it is managed by GetPythonIndent
+set indentkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
+set cinkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
+
+" Suffixes that get lower priority when doing tab completion for filenames.
+" These are files we are not likely to want to edit or read.
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.idx,.db,.out,.toc,.pyc,pyo
 
 " PYTHON GOODIES
 set tabstop=2
@@ -71,7 +72,6 @@ let python_highlight_exceptions = 1
 let python_highlight_space_errors = 1
 
 " Flake8
-" " let g:PyFlakeOnWrite = 0
 let g:PyFlakeCheckers = 'pep8,frosted'
 let g:PyFlakeDisabledMessages = 'E128,E501,E116'
 nnoremap <silent> <Leader>8 :PyFlakeToggle<CR>
@@ -84,45 +84,6 @@ else
     set printfont=Monaco\ 12
 endif
 
-" colorscheme wombat256
-
-" """""""""
-" User Info
-" """""""""
-" PLEASE DEFINE THESE IN vimrc.local
-" let g:shortname = 'login'
-" let g:fullname  = 'Full Name'
-" let g:email     = 'email address'
-
-" set completeopt=longest
-
-" Emacs like indenting. Pressing Tab indents line
-" Not in python, there it is managed by GetPythonIndent
-set indentkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
-set cinkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
-
-" Suffixes that get lower priority when doing tab completion for filenames.
-" These are files we are not likely to want to edit or read.
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-
-" """""""""""""""
-" TagLIST support
-" Below is a placeholder for ctags so vim does not complain if there is no
-" ctags installed on the computer
-" If you install ctags you can write the path into
-" vimrc.local.
-"     let Tlist_Ctags_Cmd="/opt/local/bin/ctags"
-" If ctags is on your path you just need to
-"     unlet Tlist_Ctags_Cmd
-" """""""""""""""
-
-let Tlist_Ctags_Cmd="/bin/true"
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_Display_Prototype = 0
-let Tlist_Compact_Format = 1
-let Tlist_Show_Menu = 1
 
 " """"""""
 " NERDTree
@@ -130,12 +91,6 @@ let Tlist_Show_Menu = 1
 let NERDTreeIgnore = ['\.vim$', '\~$', '\.pyc']
 let NERDTreeShowBookmarks = 1
 let NERDChristmasTree = 1
-
-" """""""""""
-" BufExplorer
-" """""""""""
-" let g:bufExplorerSplitBelow=1
-" let g:bufExplorerResize=1
 
 " """"""""""""""
 " NERD Commenter
@@ -146,8 +101,6 @@ let NERDCreateDefaultMappings=1
 " """""""""""""""""
 " Templates
 " """""""""""""""""
-
-" let g:templates_directory=[$HOME.'/.vim/templates']
 let g:templates_directory=[$HOME.'/.vim/templates', 'templates']
 
 " """""""""""""""""
@@ -161,17 +114,11 @@ if !exists('g:airline_symbols')
 endif
 
 " unicode symbols
-let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 
@@ -188,17 +135,10 @@ nnoremap <silent> <Leader>N :set number!<CR>
 
 nnoremap <silent> da "_dd
 
-" Standard Unix Home/End
-" nnoremap <Home> ^
-" nnoremap <End> $
-
 nnoremap <silent> <Leader>ts :ConqueTermSplit zsh<CR>
 nnoremap <silent> <Leader>tn :ConqueTermTab zsh<CR>
 
 map <silent> <Leader>c <plug>NERDCommenterToggle
-
-" inoremap <silent> <C-\> <C-N>
-" inoremap <silent> <C-Tab> <C-N>
 
 " diffput/diffget
 nnoremap <silent> <Leader>dp :diffput<CR>
@@ -243,30 +183,6 @@ let g:ConqueTerm_TERM = 'xterm-256color'
 let g:ConqueTerm_CloseOnEnd = 1
 let g:ConqueTerm_SendVisKey = ',tp'
 
-" Tab selection by number
-if has('mac') || has('macunix')
-    nnoremap <silent> <D-1> 1gt
-    nnoremap <silent> <D-2> 2gt
-    nnoremap <silent> <D-3> 3gt
-    nnoremap <silent> <D-4> 4gt
-    nnoremap <silent> <D-5> 5gt
-    nnoremap <silent> <D-6> 6gt
-    nnoremap <silent> <D-7> 7gt
-    nnoremap <silent> <D-8> 8gt
-    nnoremap <silent> <D-9> 9gt
-    nnoremap <silent> <D-0> 10gt
-else
-    nnoremap <silent> <M-1> 1gt
-    nnoremap <silent> <M-2> 2gt
-    nnoremap <silent> <M-3> 3gt
-    nnoremap <silent> <M-4> 4gt
-    nnoremap <silent> <M-5> 5gt
-    nnoremap <silent> <M-6> 6gt
-    nnoremap <silent> <M-7> 7gt
-    nnoremap <silent> <M-8> 8gt
-    nnoremap <silent> <M-9> 9gt
-    nnoremap <silent> <M-0> 10gt
-endif
 
 " Map Ctrl-T to new tab and Ctrl-W to close tab
 " Map Ctrl-S to save
@@ -278,12 +194,10 @@ if !(has('mac') || has('macunix'))
 endif
 
 " <Leader>hh opens my help file
-nnoremap <silent> <Leader>hh :help akmap<CR>
+" nnoremap <silent> <Leader>hh :help akmap<CR>
 
-" Vim5 comes with syntaxhighlighting. If you want to enable syntaxhightlighting
-" by default uncomment the next three lines.
 if has("syntax")
-    syntax on		" Default to no syntax highlightning
+    syntax on
 endif
 
 if has("autocmd")
@@ -296,17 +210,13 @@ if has("autocmd")
   " If doing a diff. Upon writing changes to file, automatically update the differences
   autocmd BufWritePost * if &diff == 1 | diffupdate | endif
 
+  " Text files settings
   autocmd BufNewFile,BufRead *.txt setf text
   autocmd FileType text set textwidth=78 printfont=:h10
 
   " Reload .vimrc, after modifications
   autocmd BufWritePost ~/.vimrc   so ~/.vimrc
   autocmd BufWritePost ~/.vim/vimrc   so ~/.vim/vimrc
-  if has("gui_running")
-    autocmd BufWritePost ~/.gvimrc   so ~/.gvimrc
-    autocmd BufWritePost ~/.vim/gvimrc   so ~/.vim/gvimrc
-  endif
-
 endif
 
 """ iTerm 2 Custom cursor shape

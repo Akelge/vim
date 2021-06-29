@@ -4,3 +4,4 @@ A deep cleanup to vim configuration
 - fix nerdtree
 - git support
 - terminal support
+- airline improve

@@ -49,9 +49,6 @@
 [submodule "pack/local/opt/salt-vim"]
 	path = pack/local/opt/salt-vim
 	url = https://github.com/saltstack/salt-vim.git
-[submodule "pack/local/opt/The-NERD-Tree"]
-	path = pack/local/opt/The-NERD-Tree
-	url = https://github.com/vim-scripts/The-NERD-Tree.git
 [submodule "pack/local/opt/vim-pandoc"]
 	path = pack/local/opt/vim-pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc.git
@@ -76,3 +73,6 @@
 [submodule "pack/local/start/vim-fish"]
 	path = pack/local/start/vim-fish
 	url = https://github.com/dag/vim-fish.git
+[submodule "pack/local/start/nerdtree"]
+	path = pack/local/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git

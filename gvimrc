@@ -5,11 +5,11 @@
 "
 
 if has('mac') || has('macunix')
-    set guifont=Monaco:h11
+    set guifont=Monaco:h13
     set fuoptions=maxvert,maxhorz
     set transparency=4
 else
-    set guifont=Monaco\ 11
+    set guifont=Monaco\ 13
 endif
 
 set anti
@@ -34,15 +34,6 @@ if &background == "dark"
 endif
 
 colorscheme Tomorrow-Night-Eighties
-" colorscheme railscasts
-" colorscheme zenburn
-" colorscheme freya
-" colorscheme southwest-fog
-" colorscheme moria
-" colorscheme morning
-" colorscheme desert
-" colorscheme macvim
-" colorscheme inkpot
 
 " Line/block move up/down
 if (has('mac') || has('macunix'))
@@ -55,6 +46,29 @@ if (has('mac') || has('macunix'))
 
     vnoremap <M-Up> :m '<-2<CR>gv=gv
     vnoremap <M-Down> :m '>+1<CR>gv=gv
+    " Select tab by Cmd-number
+    nnoremap <silent> <D-1> 1gt
+    nnoremap <silent> <D-2> 2gt
+    nnoremap <silent> <D-3> 3gt
+    nnoremap <silent> <D-4> 4gt
+    nnoremap <silent> <D-5> 5gt
+    nnoremap <silent> <D-6> 6gt
+    nnoremap <silent> <D-7> 7gt
+    nnoremap <silent> <D-8> 8gt
+    nnoremap <silent> <D-9> 9gt
+    nnoremap <silent> <D-0> 10gt
+else
+    " Select tab by Alt-number
+    nnoremap <silent> <M-1> 1gt
+    nnoremap <silent> <M-2> 2gt
+    nnoremap <silent> <M-3> 3gt
+    nnoremap <silent> <M-4> 4gt
+    nnoremap <silent> <M-5> 5gt
+    nnoremap <silent> <M-6> 6gt
+    nnoremap <silent> <M-7> 7gt
+    nnoremap <silent> <M-8> 8gt
+    nnoremap <silent> <M-9> 9gt
+    nnoremap <silent> <M-0> 10gt
 endif
 
 " Emacs like indenting. Pressing Tab indents line
@@ -62,6 +76,8 @@ set indentkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
 set cinkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
 
 
+autocmd BufWritePost ~/.gvimrc   so ~/.gvimrc
+autocmd BufWritePost ~/.vim/gvimrc   so ~/.vim/gvimrc
 
 " User customizations are held in file ~/.vim/gvimrc.local
 if filereadable($HOME."/.vim/gvimrc.local")
