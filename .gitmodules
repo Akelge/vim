@@ -1,6 +1,3 @@
-[submodule "pack/local/start/jsbeautify"]
-	path = pack/local/start/jsbeautify
-	url = https://github.com/vim-scripts/jsbeautify.git
 [submodule "pack/local/start/nginx.vim"]
 	path = pack/local/start/nginx.vim
 	url = https://github.com/chr4/nginx.vim.git
@@ -16,15 +13,6 @@
 [submodule "pack/local/start/The-NERD-Commenter"]
 	path = pack/local/start/The-NERD-Commenter
 	url = https://github.com/vim-scripts/The-NERD-Commenter.git
-[submodule "pack/local/start/tlib_vim"]
-	path = pack/local/start/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
-[submodule "pack/local/start/vcscommand.vim"]
-	path = pack/local/start/vcscommand.vim
-	url = https://github.com/vim-scripts/vcscommand.vim.git
-[submodule "pack/local/start/vim-addon-mw-utils"]
-	path = pack/local/start/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "pack/local/start/vim-airline"]
 	path = pack/local/start/vim-airline
 	url = https://github.com/bling/vim-airline.git
@@ -34,27 +22,9 @@
 [submodule "pack/local/opt/haproxy.vim"]
 	path = pack/local/opt/haproxy.vim
 	url = https://github.com/sclo/haproxy.vim.git
-[submodule "pack/local/opt/logstash.vim"]
-	path = pack/local/opt/logstash.vim
-	url = https://github.com/robbles/logstash.vim.git
 [submodule "pack/local/opt/open-terminal-filemanager"]
 	path = pack/local/opt/open-terminal-filemanager
 	url = https://github.com/vim-scripts/open-terminal-filemanager.git
-[submodule "pack/local/opt/salt-vim"]
-	path = pack/local/opt/salt-vim
-	url = https://github.com/saltstack/salt-vim.git
-[submodule "pack/local/opt/vim-pandoc"]
-	path = pack/local/opt/vim-pandoc
-	url = https://github.com/vim-pandoc/vim-pandoc.git
-[submodule "pack/local/opt/vim-pandoc-syntax"]
-	path = pack/local/opt/vim-pandoc-syntax
-	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
-[submodule "pack/local/opt/vim-snipmate"]
-	path = pack/local/opt/vim-snipmate
-	url = https://github.com/garbas/vim-snipmate.git
-[submodule "pack/local/opt/vim-snippets"]
-	path = pack/local/opt/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
 [submodule "pack/local/start/textformat.vim"]
 	path = pack/local/start/textformat.vim
 	url = https://github.com/jozip/textformat.vim.git
@@ -64,9 +34,6 @@
 [submodule "pack/local/start/surround"]
 	path = pack/local/start/surround
 	url = https://tpope.io/vim/surround.git
-[submodule "pack/local/start/vim-fish"]
-	path = pack/local/start/vim-fish
-	url = https://github.com/dag/vim-fish.git
 [submodule "pack/local/start/nerdtree"]
 	path = pack/local/start/nerdtree
 	url = git@github.com:preservim/nerdtree.git
@@ -79,6 +46,6 @@
 [submodule "pack/local/start/vim-gitgutter"]
 	path = pack/local/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "pack/local/start/git-support"]
-	path = pack/local/start/git-support
-	url = git@github.com:WolfgangMehner/git-support.git
+[submodule "pack/local/start/vim-fugitive"]
+	path = pack/local/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
