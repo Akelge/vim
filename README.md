@@ -1,7 +1,8 @@
 A deep cleanup to vim configuration
 
-- remove unused plugins and colorscheme
-- fix nerdtree
+- ~~remove unused plugins and colorscheme~~
+- ~~fix nerdtree~~
 - git support
-- terminal support
+- ~~terminal support~~
 - airline improve
+- study surround plugin

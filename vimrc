@@ -139,6 +139,8 @@ nnoremap <silent> <Leader>tt :below terminal<CR>
 " GIT
 """""""""""""""
 nnoremap <silent> <Leader>gg :GitGutterLineHighlightsToggle<CR>
+nnoremap <silent> <Leader>gc :GitCommit
+nnoremap <silent> <Leader>gs :GitStatus<CR>
 
 " """""""""""""""""
 " Airline customizations
