@@ -67,3 +67,6 @@
 [submodule "pack/local/opt/vim-obsidian"]
 	path = pack/local/opt/vim-obsidian
 	url = git@github.com:abra/vim-obsidian.git
+[submodule "pack/local/start/vim-workspace"]
+	path = pack/local/start/vim-workspace
+	url = git@github.com:thaerkh/vim-workspace.git
