@@ -75,6 +75,15 @@ endif
 autocmd BufWritePost ~/.gvimrc   so ~/.gvimrc
 autocmd BufWritePost ~/.vim/gvimrc   so ~/.vim/gvimrc
 
+let g:terminal_ansi_colors = ['#073642', '#dc322f', \
+                              '#859900', '#b58900', \
+                              '#268bd2', '#d33682', \
+                              '#2aa198', '#eee8d5', \
+                              '#002b36', '#cb4b16', \
+                              '#93a1a1', '#839496', \
+                              '#657b83', '#6c71c4', \
+                              '#586e75', '#fdf6e3']
+
 " User customizations are held in file ~/.vim/gvimrc.local
 if filereadable($HOME."/.vim/gvimrc.local")
     source $HOME/.vim/gvimrc.local

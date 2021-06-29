@@ -129,6 +129,17 @@ let NERDCreateDefaultMappings=1
 " """""""""""""""""
 let g:templates_directory=[$HOME.'/.vim/templates', 'templates']
 
+"""""""""""""""
+" Terminal
+"""""""""""""""
+set termwinsize=10*0
+nnoremap <silent> <Leader>tt :below terminal<CR>
+
+"""""""""""""""
+" GIT
+"""""""""""""""
+nnoremap <silent> <Leader>gg :GitGutterLineHighlightsToggle<CR>
+
 " """""""""""""""""
 " Airline customizations
 " """""""""""""""""

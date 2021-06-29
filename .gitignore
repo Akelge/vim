@@ -1,4 +1,5 @@
 bundle/
+view/
 gvimrc.local
 vimrc.local
 .netrwhist
