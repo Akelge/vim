@@ -141,9 +141,22 @@ endif
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.colnr = ''
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
+let g:airline#extensions#whitespace#show_message = 0
+
+
+"""""""""""
+" Sessions
+"""""""""""
+set sessionoptions-=buffers
+set sessionoptions-=options
+let g:session_lock_enabled = 0
+let g:session_autoload = 0
+let g:session_autosave = 'yes'
+let g:session_autosave_periodic = 10
 
 
 """"""""""""
@@ -223,8 +236,17 @@ if has("autocmd")
   autocmd FileType text set textwidth=78 printfont=:h10
 
   " Reload .vimrc, after modifications
-  autocmd BufWritePost ~/.vimrc   so ~/.vimrc
+  autocmd BufWritePost ~/.vimrc       so ~/.vimrc
   autocmd BufWritePost ~/.vim/vimrc   so ~/.vim/vimrc
+  if has("gui_running")
+      if filereadable($HOME."/.gvimrc")
+          source ~/.gvimrc
+      endif
+      if filereadable($HOME."/.vim/gvimrc")
+          source ~/.vim/gvimrc
+      endif
+  endif
+
 endif
 
 """ iTerm 2 Custom cursor shape
@@ -243,7 +265,7 @@ if $TERM_PROGRAM == 'iTerm.app'
     imap <expr> <Esc>[200~ XTermPasteBegin("")
 endif
 
-colorscheme freya
+" colorscheme freya
 
 " User customizations are held in file ~/.vim/vimrc.local
 if filereadable($HOME."/.vim/vimrc.local")

@@ -91,6 +91,7 @@ else
 endif
 
 
+" automatically reload config
 autocmd BufWritePost ~/.gvimrc   so ~/.gvimrc
 autocmd BufWritePost ~/.vim/gvimrc   so ~/.vim/gvimrc
 
