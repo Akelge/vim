@@ -16,9 +16,9 @@ set nostartofline
 set autochdir
 
 set nofoldenable
-set background=dark
+" set background=dark
 set title
-set number
+" set number
 
 set browsedir=buffer
 set autochdir
@@ -66,7 +66,7 @@ set smarttab
 set expandtab
 set softtabstop=2
 
-" Highlightinh in python:
+" Highlightin in python:
 let python_highlight_numbers = 1
 let python_highlight_builtins = 1
 let python_highlight_exceptions = 1
@@ -86,47 +86,28 @@ else
 endif
 
 
-" """"""""
+""""""""""
 " NERDTree
-" """"""""
+""""""""""
 let NERDTreeIgnore = ['\.vim$', '\~$', '\.pyc']
 let NERDTreeShowBookmarks = 1
 let g:NERDTreeGitStatusUseNerdFonts = 1
 let g:NERDTreeGitStatusShowClean = 0
 let g:NERDTreeCustomOpenArgs={'file':{'where': 't'}}
 
-" Start NERDTree and leave the cursor in it.
-autocmd VimEnter * NERDTree | wincmd p
-" Start NERDTree when Vim is started without file arguments.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-" If a file is specified, move the cursor to its window.
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
-" Start NERDTree when Vim starts with a directory argument.
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
-" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
-" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * silent NERDTreeMirror
-
 nnoremap <silent> <Leader>N :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>n :NERDTreeFocus<CR>
 
 
-" """"""""""""""
+""""""""""""""""
 " NERD Commenter
-" """"""""""""""
+""""""""""""""""
 let NERDSpaceDelims=1
 let NERDCreateDefaultMappings=1
 
-" """""""""""""""""
+"""""""""""""""""""
 " Templates
-" """""""""""""""""
+"""""""""""""""""""
 let g:templates_directory=[$HOME.'/.vim/templates', 'templates']
 
 """""""""""""""
@@ -138,13 +119,17 @@ nnoremap <silent> <Leader>tt :below terminal<CR>
 """""""""""""""
 " GIT
 """""""""""""""
-nnoremap <silent> <Leader>gg :GitGutterLineHighlightsToggle<CR>
-nnoremap <silent> <Leader>gc :GitCommit
-nnoremap <silent> <Leader>gs :GitStatus<CR>
+nnoremap <silent> <Leader>gh :GitGutterLineHighlightsToggle<CR>
+nnoremap <silent> <Leader>gc :Gcommit -a<CR>
+nnoremap <silent> <Leader>gs :Gstatus<CR>
+nnoremap <silent> <Leader>ga :Git add -p<CR>
+nnoremap <silent> <Leader>gm :Gcommit --amend<CR>
+nnoremap <silent> <Leader>gp :Gpull<CR>
+nnoremap <silent> <Leader>gP :Gpush<CR>
 
-" """""""""""""""""
+""""""""""""""""""
 " Airline customizations
-" """""""""""""""""
+""""""""""""""""""
 let g:airline#extensions#capslock#enabled = 1
 let g:airline#extensions#branch#use_vcscommand = 0
 
@@ -161,19 +146,14 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 
-" """""""""""
+""""""""""""
 " Keymappings
-" """""""""""
+""""""""""""
 nnoremap <silent> <Leader>l :set list!<CR>
 nnoremap <silent> <Leader>f :set fullscreen!<CR>
 nnoremap <silent> <Leader>x :set paste!<CR>
 
 nnoremap <silent> da "_dd
-
-nnoremap <silent> <Leader>ts :ConqueTermSplit zsh<CR>
-nnoremap <silent> <Leader>tn :ConqueTermTab zsh<CR>
-
-map <silent> <Leader>c <plug>NERDCommenterToggle
 
 " diffput/diffget
 nnoremap <silent> <Leader>dp :diffput<CR>
@@ -210,13 +190,6 @@ vnoremap <silent> <S-Up> k
 " nnoremap <silent> <F9> :OpenTerminal<CR>
 " nnoremap <silent> <F10> :OpenFilemanager<CR><CR>
 nnoremap <silent> <Leader>of :OpenFilemanager<CR>
-
-" Conque Term
-let g:ConqueTerm_InsertOnEnter = 1
-let g:ConqueTerm_CWInsert = 1
-let g:ConqueTerm_TERM = 'xterm-256color'
-let g:ConqueTerm_CloseOnEnd = 1
-let g:ConqueTerm_SendVisKey = ',tp'
 
 
 " Map Ctrl-T to new tab and Ctrl-W to close tab
@@ -269,6 +242,8 @@ if $TERM_PROGRAM == 'iTerm.app'
     map <expr> <Esc>[200~ XTermPasteBegin("i")
     imap <expr> <Esc>[200~ XTermPasteBegin("")
 endif
+
+colorscheme freya
 
 " User customizations are held in file ~/.vim/vimrc.local
 if filereadable($HOME."/.vim/vimrc.local")

@@ -5,3 +5,4 @@ vimrc.local
 .netrwhist
 *~
 *.swp
+.DS_Store
