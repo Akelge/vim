@@ -2,7 +2,8 @@ A deep cleanup to vim configuration
 
 - ~~remove unused plugins and colorscheme~~
 - ~~fix nerdtree~~
-- git support
+- ~~git support~~
 - ~~terminal support~~
-- airline improve
+- ~~airline improve~~
 - study surround plugin
+- session restore
