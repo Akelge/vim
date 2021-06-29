@@ -31,9 +31,6 @@
 [submodule "pack/local/start/vim-terraform"]
 	path = pack/local/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
-[submodule "pack/local/start/surround"]
-	path = pack/local/start/surround
-	url = https://tpope.io/vim/surround.git
 [submodule "pack/local/start/nerdtree"]
 	path = pack/local/start/nerdtree
 	url = git@github.com:preservim/nerdtree.git
@@ -70,3 +67,6 @@
 [submodule "pack/local/start/vim-workspace"]
 	path = pack/local/start/vim-workspace
 	url = git@github.com:thaerkh/vim-workspace.git
+[submodule "pack/local/start/vim-surround"]
+	path = pack/local/start/vim-surround
+	url = git@github.com:tpope/vim-surround.git
