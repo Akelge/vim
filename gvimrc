@@ -7,7 +7,7 @@
 if has('mac') || has('macunix')
     set guifont=Monaco:h13
     set fuoptions=maxvert,maxhorz
-    set transparency=4
+    set transparency=2
 else
     set guifont=Monaco\ 13
 endif
@@ -70,10 +70,6 @@ else
     nnoremap <silent> <M-9> 9gt
     nnoremap <silent> <M-0> 10gt
 endif
-
-" Emacs like indenting. Pressing Tab indents line
-set indentkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
-set cinkeys=0{,0},0),:,0#,!^F,o,O,e,!<Tab>,!^F
 
 
 autocmd BufWritePost ~/.gvimrc   so ~/.gvimrc
