@@ -33,40 +33,40 @@
 	url = https://github.com/hashivim/vim-terraform.git
 [submodule "pack/local/start/nerdtree"]
 	path = pack/local/start/nerdtree
-	url = git@github.com:preservim/nerdtree.git
+	url = https://github.com/preservim/nerdtree.git
 [submodule "pack/local/start/vim-devicons"]
 	path = pack/local/start/vim-devicons
-	url = git@github.com:ryanoasis/vim-devicons.git
+	url = https://github.com/ryanoasis/vim-devicons.git
 [submodule "pack/local/start/nerdtree-git-plugin"]
 	path = pack/local/start/nerdtree-git-plugin
-	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 [submodule "pack/local/start/vim-gitgutter"]
 	path = pack/local/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "pack/local/start/vim-fugitive"]
 	path = pack/local/start/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "pack/local/start/tlib_vim"]
 	path = pack/local/start/tlib_vim
-	url = git@github.com:tomtom/tlib_vim.git
+	url = https://github.com/tomtom/tlib_vim.git
 [submodule "pack/local/opt/vim-tomorrow-theme"]
 	path = pack/local/opt/vim-tomorrow-theme
-	url = git@github.com:chriskempson/vim-tomorrow-theme.git
+	url = https://github.com/chriskempson/vim-tomorrow-theme.git
 [submodule "pack/local/opt/freya"]
 	path = pack/local/opt/freya
-	url = git@github.com:jie-mei/freya.git
+	url = https://github.com/jie-mei/freya.git
 [submodule "pack/local/opt/inkpot"]
 	path = pack/local/opt/inkpot
-	url = git@github.com:ciaranm/inkpot.git
+	url = https://github.com/ciaranm/inkpot.git
 [submodule "pack/local/opt/moria"]
 	path = pack/local/opt/moria
-	url = git@github.com:vim-scripts/moria.git
+	url = https://github.com/vim-scripts/moria.git
 [submodule "pack/local/opt/vim-obsidian"]
 	path = pack/local/opt/vim-obsidian
-	url = git@github.com:abra/vim-obsidian.git
+	url = https://github.com/abra/vim-obsidian.git
 [submodule "pack/local/start/vim-workspace"]
 	path = pack/local/start/vim-workspace
-	url = git@github.com:thaerkh/vim-workspace.git
+	url = https://github.com/thaerkh/vim-workspace.git
 [submodule "pack/local/start/vim-surround"]
 	path = pack/local/start/vim-surround
-	url = git@github.com:tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
