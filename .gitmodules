@@ -34,9 +34,6 @@
 [submodule "pack/local/start/nerdtree"]
 	path = pack/local/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule "pack/local/start/vim-devicons"]
-	path = pack/local/start/vim-devicons
-	url = https://github.com/ryanoasis/vim-devicons.git
 [submodule "pack/local/start/nerdtree-git-plugin"]
 	path = pack/local/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
