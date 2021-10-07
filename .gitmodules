@@ -10,9 +10,6 @@
 [submodule "pack/local/start/taglist-plus"]
 	path = pack/local/start/taglist-plus
 	url = https://github.com/vim-scripts/taglist-plus.git
-[submodule "pack/local/start/The-NERD-Commenter"]
-	path = pack/local/start/The-NERD-Commenter
-	url = https://github.com/vim-scripts/The-NERD-Commenter.git
 [submodule "pack/local/start/vim-airline"]
 	path = pack/local/start/vim-airline
 	url = https://github.com/bling/vim-airline.git
@@ -67,3 +64,6 @@
 [submodule "pack/local/start/vim-surround"]
 	path = pack/local/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/local/start/nerdcommenter"]
+	path = pack/local/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
