@@ -7,4 +7,4 @@ vimrc.local
 *.swp
 .DS_Store
 Session.vim
-*/docs/tags
+**/docs/tags
