@@ -16,9 +16,6 @@
 [submodule "pack/local/start/vim-template"]
 	path = pack/local/start/vim-template
 	url = https://github.com/aperezdc/vim-template.git
-[submodule "pack/local/opt/haproxy.vim"]
-	path = pack/local/opt/haproxy.vim
-	url = https://github.com/sclo/haproxy.vim.git
 [submodule "pack/local/opt/open-terminal-filemanager"]
 	path = pack/local/opt/open-terminal-filemanager
 	url = https://github.com/vim-scripts/open-terminal-filemanager.git
@@ -67,3 +64,6 @@
 [submodule "pack/local/start/nerdcommenter"]
 	path = pack/local/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule "pack/local/opt/vim-haproxy"]
+	path = pack/local/opt/vim-haproxy
+	url = https://github.com/Joorem/vim-haproxy.git
