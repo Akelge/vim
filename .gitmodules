@@ -16,9 +16,6 @@
 [submodule "pack/local/start/vim-template"]
 	path = pack/local/start/vim-template
 	url = https://github.com/aperezdc/vim-template.git
-[submodule "pack/local/opt/open-terminal-filemanager"]
-	path = pack/local/opt/open-terminal-filemanager
-	url = https://github.com/vim-scripts/open-terminal-filemanager.git
 [submodule "pack/local/start/textformat.vim"]
 	path = pack/local/start/textformat.vim
 	url = https://github.com/jozip/textformat.vim.git
