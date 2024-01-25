@@ -14,6 +14,7 @@ set history=50
 set nohlsearch
 set nostartofline
 set autochdir
+set paste
 
 set nofoldenable
 " set background=dark
@@ -120,12 +121,12 @@ nnoremap <silent> <Leader>tt :below terminal<CR>
 " GIT
 """""""""""""""
 nnoremap <silent> <Leader>gh :GitGutterLineHighlightsToggle<CR>
-nnoremap <silent> <Leader>gc :Gcommit -a<CR>
-nnoremap <silent> <Leader>gs :Gstatus<CR>
+nnoremap <silent> <Leader>gc :Git commit -a<CR>
+nnoremap <silent> <Leader>gs :Git<CR>
 nnoremap <silent> <Leader>ga :Git add -p<CR>
-nnoremap <silent> <Leader>gm :Gcommit --amend<CR>
-nnoremap <silent> <Leader>gp :Gpull<CR>
-nnoremap <silent> <Leader>gP :Gpush<CR>
+nnoremap <silent> <Leader>gm :Git commit --amend<CR>
+nnoremap <silent> <Leader>gp :Git pull<CR>
+nnoremap <silent> <Leader>gP :Git push<CR>
 
 """"""""""""""""""
 " Airline customizations
@@ -198,12 +199,6 @@ nnoremap <silent> <S-Down> V
 nnoremap <silent> <S-Up> V
 vnoremap <silent> <S-Down> j
 vnoremap <silent> <S-Up> k
-
-" Terminal/Filemanager
-" nnoremap <silent> <F9> :OpenTerminal<CR>
-" nnoremap <silent> <F10> :OpenFilemanager<CR><CR>
-nnoremap <silent> <Leader>of :OpenFilemanager<CR>
-
 
 " Map Ctrl-T to new tab and Ctrl-W to close tab
 " Map Ctrl-S to save
