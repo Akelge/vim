@@ -14,7 +14,7 @@ set history=50
 set nohlsearch
 set nostartofline
 set autochdir
-set paste
+set nopaste
 
 set nofoldenable
 " set background=dark

@@ -64,3 +64,6 @@
 [submodule "pack/local/opt/vim-haproxy"]
 	path = pack/local/opt/vim-haproxy
 	url = https://github.com/Joorem/vim-haproxy.git
+[submodule "pack/local/start/yaml-vim"]
+	path = pack/local/start/yaml-vim
+	url = git@github.com:mrk21/yaml-vim.git
